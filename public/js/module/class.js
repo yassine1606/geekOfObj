@@ -13,7 +13,7 @@ export class boss extends personnage {
     constructor(nom, pv, pa) {
         super(nom, pv, pa);
     }
-    defense(this){
+    defense(boss){
         this.attaquer *= 0.5;
     }
 }
