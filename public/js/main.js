@@ -88,9 +88,7 @@ while ((guerrier.pv > 0 || mage.pv > 0 || archer.pv > 0) && boss.pv > 0) {
     }
     
 }
+// Si les 3 persos ont 0pv ou moins c'est le héro qui gagne
 if (guerrier.pv <= 0 && mage.pv <= 0 && archer.pv <= 0) {
     console.log("Tous les héros ont succombés face au boss, vous avez perdu");
 }
-
-
-
