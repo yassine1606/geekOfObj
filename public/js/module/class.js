@@ -66,6 +66,8 @@ export class guerrier extends personnage {
 -- Méthode attack : Va augmenter les pa du héro et diminuer ses points de vie
 -- Méthode défense : Va augmenter les pv du héro et diminuer ses dégats
 -- Méthode doDamage : Va retirer le pv du boss (Va le frapper)
+
+-- Si le héro n'a plus de mana, il va en recevoir 7 sinon il frappe
 */
 export class mage extends personnage {
     constructor(nom, pv, pa, mana) {
@@ -94,13 +96,14 @@ export class mage extends personnage {
             this.mana -= 2;
             console.log("Votre mana diminue : "+this.mana);
         }
-    
     }
 }
 /*
 -- Méthode attack : Va augmenter les pa du héro et diminuer ses points de vie
 -- Méthode défense : Va augmenter les pv du héro et diminuer ses dégats
 -- Méthode doDamage : Va retirer le pv du boss (Va le frapper)
+
+-- Si l'archer n'a plus de flèches, il va en recevoir 6 sinon il frappe
 */
 export class archer extends personnage {
     constructor(nom, pv, pa, nbFleche) {
