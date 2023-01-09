@@ -9,13 +9,28 @@ let archer = INSTANCE.archer1;
 
 let hero1 = prompt("Entrez le nom du guerrier");
 guerrier.nom = hero1;
+let pvGuer = +prompt(`Entrez les pv du guerrier`)
+guerrier.pv = pvGuer;
+let paGuer = +prompt(`Entrez les degats du guerrier`)
+guerrier.pa = paGuer;
 
 
 let hero2 = prompt("Entrez le nom du mage");
 mage.nom = hero2;
+let pvMage = +prompt(`Entrez les pv du mage`)
+mage.pv = pvMage;
+let paMage = +prompt(`Entrez les degats du mage`);
+mage.pa = paMage;
+
+
+
 
 let hero3 = prompt("Entrez le nom de l'archer");
 archer.nom = hero3;
+let pvArcher = +prompt(`Entrez les pv de l'archer`);
+archer.pv = pvArcher;
+let paArcher = +prompt(`Entrez les degats de l'archer`);
+archer.pa = paArcher;
 
 let postureHero1 = prompt("Entrez la posture du guerrier (attaque)(defense)(normal)");
 if (postureHero1 == 'attaque') {

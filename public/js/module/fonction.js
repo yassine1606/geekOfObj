@@ -17,20 +17,28 @@ export function randomFleche() {
 }
 
 export function poserEnigme() {
-    const enigmes = [
-        { enigme: "Quel chiffre obtient-on en multipliant tous les chiffres d'un clavier ?", reponse: "0" },
-        { enigme: "Combien y a-t-il de continents dans le monde?", reponse: "6" },
-        { enigme: "Quelle est la capitale de l'europe ?", reponse: "Bruxelles" },
+    const enigmes = [{
+            enigme: "Quel chiffre obtient-on en multipliant tous les chiffres d'un clavier ?",
+            reponse: "0"
+        },
+        {
+            enigme: "Combien y a-t-il de continents dans le monde?",
+            reponse: "6"
+        },
+        {
+            enigme: "Quelle est la capitale de l'europe ?",
+            reponse: "Bruxelles"
+        },
     ];
 
-    const enigme = enigmes[Math.floor(Math.random() * enigmes.length)];
+    let enigme = enigmes[Math.floor(Math.random() * enigmes.length)];
 
-    let reponseCorrecte = false;
+    let repTrue = false;
     let nbEssais = 0;
-    while (!reponseCorrecte && nbEssais < 3) {
-        const reponse = prompt(enigme.enigme);
+    while (!repTrue && nbEssais < 2) {
+        let reponse = prompt(enigme.enigme);
         if (reponse === enigme.reponse) {
-            reponseCorrecte = true;
+            repTrue = true;
         }
         nbEssais++;
     }
@@ -45,3 +53,4 @@ export function randomBoss() {
     let cibleBoss = tabBoss[random];
     return cibleBoss;
 }
+

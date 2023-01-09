@@ -84,10 +84,9 @@ export class mage extends personnage {
             this.mana -= 2;
             console.log("Votre mana diminue : "+this.mana);
         }
+    
     }
 }
-
-
 export class archer extends personnage {
     constructor(nom, pv, pa, nbFleche) {
         super(nom, pv, pa);
