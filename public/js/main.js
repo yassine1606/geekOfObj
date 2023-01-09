@@ -68,7 +68,6 @@ let pvBoss = boss.pv;
 console.log(`vous entrez dans le donjon et vous croisez ${boss.nom}`);
 while ((guerrier.pv > 0 || mage.pv > 0 || archer.pv > 0) && boss.pv > 0) {
     if (boss.pv <= pvBoss * 0.2) {
-        FONCTION.askEnigme()
         if (FONCTION.askEnigme()==true) {
             boss.pv = 0;
             console.log("Vous avez résolu l'énigme, le boss meurt !");
