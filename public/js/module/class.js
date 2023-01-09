@@ -120,7 +120,7 @@ export class archer extends personnage {
     }
     doDamage(boss) {
 
-        if (this.nbFleche <= 0) {
+        if (this.nbFleche <= 1) {
             this.nbFleche += 6;
             console.log("Impossible d'attaquer, vous n'avez plus de flèche");
             console.log(this.nom + " a rechargé ses flèches : " + this.nbFleche);

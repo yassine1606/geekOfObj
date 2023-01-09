@@ -17,9 +17,9 @@ guerrier.pa = paGuer;
 // initialisation des pv, pa et du nom du mage
 let hero2 = prompt("Entrez le nom du mage");
 mage.nom = hero2;
-let pvMage = +prompt(`Entrez les pv du mage`)
+let pvMage = +prompt(`Entrez les pv du mage `)
 mage.pv = pvMage;
-let paMage = +prompt(`Entrez les degats du mage`);
+let paMage = +prompt(`Entrez les degats du mage `);
 mage.pa = paMage;
 
 
