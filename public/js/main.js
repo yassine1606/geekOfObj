@@ -2,8 +2,8 @@ import * as INSTANCE from "./module/instance.js";
 import * as FONCTION from "./module/fonction.js";
 import * as CLASS from "./module/class.js";
 
-
-    let guerrier = INSTANCE.guerrier1;
+// Création de variable pour les instances des héros
+let guerrier = INSTANCE.guerrier1;
 let mage = INSTANCE.mage1;
 let archer = INSTANCE.archer1;
 
@@ -22,9 +22,6 @@ let pvMage = +prompt(`Entrez les pv du mage `)
 mage.pv = pvMage;
 let paMage = +prompt(`Entrez les degats du mage `);
 mage.pa = paMage;
-
-
-
 // initialisation des pv, pa et du nom de l'archer
 let hero3 = prompt("Entrez le nom de l'archer");
 archer.nom = hero3;
