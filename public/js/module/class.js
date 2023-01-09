@@ -1,19 +1,21 @@
 import * as INSTANCE from './instance.js';
 
-
+// constructor
 export class personnage {
     constructor(nom, pv, pa) {
         this.nom = nom;
         this.pv = pv;
         this.pa = pa;
     }
-
-
 }
+/* constructor
+    -Méthode doDamage Qui va choisir au hasard un personnage à attaquer pour le boss
+*/
 export class boss extends personnage {
     constructor(nom, pv, pa) {
         super(nom, pv, pa);
     }
+
     doDamage() {
         let tabPerso = [INSTANCE.guerrier1, INSTANCE.archer1, INSTANCE.mage1];
         let random = Math.floor(Math.random() * tabPerso.length);
@@ -23,7 +25,11 @@ export class boss extends personnage {
     }
 }
 
-
+/*
+-- Méthode attack : Va augmenter les pa du héro et diminuer ses points de vie
+-- Méthode défense : Va augmenter les pv du héro et diminuer ses dégats
+-- Méthode doDamage : Va retirer le pv du boss (Va le frapper)
+*/
 export class guerrier extends personnage {
     constructor(nom, pv, pa, rage) {
         super(nom, pv, pa);
@@ -56,7 +62,11 @@ export class guerrier extends personnage {
         }
     }
 }
-
+/*
+-- Méthode attack : Va augmenter les pa du héro et diminuer ses points de vie
+-- Méthode défense : Va augmenter les pv du héro et diminuer ses dégats
+-- Méthode doDamage : Va retirer le pv du boss (Va le frapper)
+*/
 export class mage extends personnage {
     constructor(nom, pv, pa, mana) {
         super(nom, pv, pa);
@@ -87,6 +97,11 @@ export class mage extends personnage {
     
     }
 }
+/*
+-- Méthode attack : Va augmenter les pa du héro et diminuer ses points de vie
+-- Méthode défense : Va augmenter les pv du héro et diminuer ses dégats
+-- Méthode doDamage : Va retirer le pv du boss (Va le frapper)
+*/
 export class archer extends personnage {
     constructor(nom, pv, pa, nbFleche) {
         super(nom, pv, pa);
