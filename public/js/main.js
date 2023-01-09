@@ -2,7 +2,8 @@ import * as INSTANCE from "./module/instance.js";
 import * as FONCTION from "./module/fonction.js";
 import * as CLASS from "./module/class.js";
 
-let guerrier = INSTANCE.guerrier1;
+
+    let guerrier = INSTANCE.guerrier1;
 let mage = INSTANCE.mage1;
 let archer = INSTANCE.archer1;
 
@@ -70,7 +71,7 @@ while ((guerrier.pv > 0 || mage.pv > 0 || archer.pv > 0) && boss.pv > 0) {
     if (boss.pv <= pvBoss * 0.2) {
         if (FONCTION.askEnigme()==true) {
             boss.pv = 0;
-            console.log("Vous avez résolu l'énigme, le boss meurt !");
+            console.log(`Vous avez résolu l'énigme, ${boss.nom} est mort !`);
         }
         else{
             guerrier.pv =0;
@@ -90,4 +91,6 @@ while ((guerrier.pv > 0 || mage.pv > 0 || archer.pv > 0) && boss.pv > 0) {
 if (guerrier.pv <= 0 && mage.pv <= 0 && archer.pv <= 0) {
     console.log("Tous les héros ont succombés face au boss, vous avez perdu");
 }
+
+
 
